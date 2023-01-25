@@ -29,12 +29,12 @@ function generateMarkdown(data) {
   ${data.des}
   
   ## Table of Contents
-  [Installation](#Installation)  
-  [Usage](#Usage)  
-  [License](#License)  
-  [Contributing](#Contributing)  
-  [Tests](#Tests)  
-  [Questions](#Questions)  
+  - [Installation](#Installation)  
+  - [Usage](#Usage)  
+  - [License](#License)  
+  - [Contributing](#Contributing)  
+  - [Tests](#Tests)  
+  - [Questions](#Questions)  
   
   ## Installation
   ${data.install}
@@ -52,8 +52,9 @@ function generateMarkdown(data) {
   ${data.test}
   
   ## Questions
-  GitHub: ${data.git}\n
-  Email: ${data.email}
+  GitHub: [${data.git}](https://github.com/${data.git})\n
+  Email: ${data.email}\n
+  This best way to contact me for questions is ${data.contact}
 
 `;
 }
