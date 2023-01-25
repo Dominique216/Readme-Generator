@@ -15,6 +15,8 @@ This project will generate a README file for any application you want to launch.
 5. From there you should be prompted in the terminal to answer ten different questions based on what criteria should be in a README file. Those questions will pertain to the propject title, a description, installation inscructions, usage, contributions, test instructions, your GitHub username, email, the best way to contact you, and the type of license used. 
 6. Once the questions are answered, a new file will appear named README.md
 ## Usage
+[ Click to watch Walkthrough Video](https://drive.google.com/file/d/1DvMxRveh0d-oQ38HYtxSjZZxGtG0XZMo/view?usp=sharing)
+
  ![Opening Integrated Terminal](./assets/sc1.png)
  ![Running Code](./assets/sc2.png)
  ![Finding Newly Generated README File](./assets/sc3.png)
