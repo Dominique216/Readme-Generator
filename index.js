@@ -1,14 +1,19 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { type } = require('os');
+const generateMarkdown = require('./utils/generatemarkdown')
 
-// TODO: Create an array of questions for user input
-const questions = ['What is the title of your project?', 'Write a desciption of your project', 'What are the installation instructions for your project?', 'What is the usage informatino about your project?', 'Who contributed to your project?', 'What are the test instructions for you project?', 'What is your Github username?', 'What is your email?'];
+// Creates an array of questions for user input
+const questions = ['What is the title of your project?', 'Write a desciption of your project', 'What are the installation instructions for your project?', 'What is the usage information about your project?', 'Who contributed to your project?', 'What are the test instructions for you project?', 'What is your Github username?', 'What is your email?'];
 
-// TODO: Create a function to write README file
+// Creates a function to write README file
 function writeToFile(fileName, data) {
-        inquirer 
+    fs.writeFile(fileName, generateMarkdown(data), (err) => err ? console.log('err') : console.log('success'))      
+}
+
+// Creates a function to initialize app
+function init() {
+          inquirer 
             .prompt([
                 {
                     type: 'input', 
@@ -50,18 +55,18 @@ function writeToFile(fileName, data) {
                     message: questions[7], 
                     name: 'email'
                 },
+                {
+                    type: 'checkbox',
+                    message: 'Which lisence do you want to choose?',
+                    name: 'license',
+                    choices: ['MIT', 'BSD', 'GPL'],
+                  },
                 
             ])
-        .then((data) => console.log(data))
-
-    
-}
-
-// TODO: Create a function to initialize app
-function init() {
-    
+.then((data) => {
+            console.log(data)
+            writeToFile('README.md', data)})
 }
 
 // Function call to initialize app
 init();
-writeToFile()
