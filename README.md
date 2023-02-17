@@ -1,5 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-# UTA-bootcamp-challenge9
+# Readme-Generator
 ## Description 
 This project will generate a README file for any application you want to launch. Using node, it will prompt the user to answer questions that will fill in a template README file with all of the users input. 
 ## Table of Contents
